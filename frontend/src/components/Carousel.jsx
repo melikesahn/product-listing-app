@@ -7,7 +7,7 @@ function Carousel({ images = [] }) {
   const prev = () => setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   const next = () => setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
-  // Touch events for swipe
+ 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -19,7 +19,7 @@ function Carousel({ images = [] }) {
     touchStartX.current = null;
   };
 
-  // Mouse events for swipe (desktop)
+  
   const handleMouseDown = (e) => {
     touchStartX.current = e.clientX;
   };

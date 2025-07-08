@@ -73,3 +73,7 @@
 .color-picker {
   margin-top: 10px;
 }
+
+body {
+  padding: 32px;
+}
