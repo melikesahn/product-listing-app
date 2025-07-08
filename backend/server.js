@@ -21,9 +21,6 @@ app.get('/api/products', async (req, res) => {
     const goldPricePerOunce = response.data.price;
     const goldPricePerGram = goldPricePerOunce / 31.1035;
 
-   // 💡 LOG: altın fiyatı ve gram fiyatı terminale yaz
-    console.log("Gold price per ounce (USD):", goldPricePerOunce);
-    console.log("Gold price per gram (USD):", goldPricePerGram);
 
     const enrichedProducts = products.map((p) => {
       const price = (p.popularityScore + 1) * p.weight * goldPricePerGram;
