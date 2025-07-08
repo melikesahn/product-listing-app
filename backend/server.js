@@ -35,11 +35,13 @@ app.get('/api/products', async (req, res) => {
     });
 
     res.json(enrichedProducts);
+
   } catch (error) {
     console.error(error);
     res.status(500).send('Altın fiyatı alınamadı');
   }
 });
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Backend çalışıyor: http://localhost:${PORT}`));

@@ -1,53 +1,69 @@
 
+
 @font-face {
-  font-family: 'Montserrat';
-  src: url('./assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-family: 'Montserrat-Regular';
+  src: url('./assets/fonts/montserat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('./assets/fonts/montserat/Montserrat-Medium.otf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir Next';
-  src: url('./assets/fonts/AvenirNext-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Avenir-Book';
+  src: url('./assets/fonts/avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
-/* UYGULAMA STİLLERİ */
-
-body {
-  font-family: 'Avenir Next', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #fff;
-}
 
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat-Medium';
   font-weight: 500;
   font-size: 15px;
 }
 
 .price {
-  font-family: 'Avenir Next', sans-serif;
+  font-family: 'Montserrat-Regular';
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.popularity {
+  font-family: 'Avenir-Book';
   font-weight: 400;
   font-size: 14px;
 }
 
-.popularity {
-  font-family: 'Avenir Next', sans-serif;
+
+.metal-name {
+  font-family: 'Avenir-Book';
+  font-weight: 400;
   font-size: 12px;
+}
+
+.main-title {
+  font-family: 'Avenir-Book';
+  font-size: 45px;
+  text-align: center;
+  margin: 30px 0 10px 0;
 }
 
 .product-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2em;
+  padding: 2em 0;
+  align-items: center;
+  min-height: 60vh;
 }
 
 .card {
-  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
   width: 220px;
