@@ -8,7 +8,7 @@ function App() {
   const listRef = useRef(null);
 
   useEffect(() => {
-    axios.get('https://product-listing-backend.onrender.com/api/products')
+    axios.get('https://product-listing-app-96xo.onrender.com/api/products')
 
       .then(res => setProducts(res.data))
       .catch(err => console.error(err));
