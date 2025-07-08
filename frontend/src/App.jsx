@@ -27,7 +27,7 @@ function App() {
           className="scroll-arrow left"
           onClick={() => scrollBy(-300)}
           style={{ position: 'absolute', left: 0, zIndex: 2, background: 'white', border: 'none', fontSize: '2em', cursor: 'pointer', height: '100%' }}
-        >&#8592;</button>
+        >&lt;</button>
         <div className="product-list" ref={listRef}>
           {products.map((p, idx) => (
             <div style={{ minWidth: '260px', flex: '0 0 auto' }} key={p.name + idx}>
@@ -39,7 +39,7 @@ function App() {
           className="scroll-arrow right"
           onClick={() => scrollBy(300)}
           style={{ position: 'absolute', right: 0, zIndex: 2, background: 'white', border: 'none', fontSize: '2em', cursor: 'pointer', height: '100%' }}
-        >&#8594;</button>
+        >&gt;</button>
       </div>
     </>
   );
