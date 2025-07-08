@@ -9,19 +9,22 @@ app.use(cors());
 const GOLD_API_URL= 'https://www.goldapi.io/api/XAU/USD';
 const API_KEY = 'goldapi-45f3dsmctr6g6q-io';
 
-// Popülerlik skorunu 5 üzerinden çeviren fonksiyon
+
 const getPopularityOutOf5 = (score) => +(score * 5).toFixed(1);
 
 app.get('/api/products', async (req, res) => {
   try {
-    // Altın fiyatını goldapi.io'dan çek
+    
     const response = await axios.get(GOLD_API_URL, {
       headers: { 'x-access-token': API_KEY }
     });
     const goldPricePerOunce = response.data.price;
     const goldPricePerGram = goldPricePerOunce / 31.1035;
 
-    // Ürünlerin fiyatını hesapla
+   // 💡 LOG: altın fiyatı ve gram fiyatı terminale yaz
+    console.log("Gold price per ounce (USD):", goldPricePerOunce);
+    console.log("Gold price per gram (USD):", goldPricePerGram);
+
     const enrichedProducts = products.map((p) => {
       const price = (p.popularityScore + 1) * p.weight * goldPricePerGram;
       return {
